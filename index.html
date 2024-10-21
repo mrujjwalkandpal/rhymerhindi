@@ -14,8 +14,6 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -27,24 +25,15 @@
 
     <main>
       <section class="hero">
-        <h1>Discover Rhymes for Your Hindi Rap</h1>
-        <p>Find perfect rhyming words for your next rap verse with ease.</p>
+        <h1>Find Hindi Rhymes for Your Rap</h1>
+        <p>Discover perfect rhymes for your next verse with ease.</p>
 
         <!-- Search Section -->
         <div class="search-box">
-          <input type="text" placeholder="Enter a word to find rhymes...">
-          <button>Search</button>
+          <input type="text" id="search-input" placeholder="Enter a word to find rhymes...">
+          <button id="search-btn">Search</button>
         </div>
-      </section>
-
-      <section id="about" class="content">
-        <h2>About Us</h2>
-        <p>We help rappers find the best rhymes for their lyrics in Hindi.</p>
-      </section>
-
-      <section id="contact" class="content">
-        <h2>Contact Us</h2>
-        <p>For collaborations or inquiries, reach us at support@hindirhyme.com.</p>
+        <div id="results"></div>
       </section>
     </main>
 
