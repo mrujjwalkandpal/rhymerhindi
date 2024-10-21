@@ -10,8 +10,12 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-  padding: 0;
-  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 header {
@@ -22,24 +26,27 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  display: inline-block;
 }
 
 nav {
-  float: right;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-  display: inline-block;
   margin-left: 20px;
 }
 
@@ -47,12 +54,22 @@ nav {
   text-decoration: none;
   color: #333;
   font-size: 1.1em;
+  transition: color 0.3s;
 }
 
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background-color: #eaeaea;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1 {
@@ -62,28 +79,58 @@ nav {
 
 .hero p {
   font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
+.search-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 300px;
+  font-size: 1em;
+  border: 2px solid #333;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Content Sections */
 .content {
   padding: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
   background: #333;
   color: white;
-}
-
-footer p {
-  font-size: 0.9em;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Hamburger Menu */
 .hamburger {
   display: none;
   cursor: pointer;
-  float: right;
 }
 
 .hamburger span {
@@ -122,16 +169,4 @@ footer p {
   }
 
   .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 8px;
-  }
-
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: -8px;
-  }
-}
+    transform: rotate(45deg
