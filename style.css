@@ -169,4 +169,20 @@ footer {
   }
 
   .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg
+    transform: rotate(45deg);
+    top: 8px;
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
